@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div style="padding: 70px 0;border:3px solid green;text-align: center" th:object="${greet}">
+        <h3>Alumno</h3>
+        <span class="badge badge-success">Id: </span>
+        <span class="badge badge-warning"th:text="${greet.id}"></span>
+        <span th:text="${greet.content}"></span>
+    </div>
+    <div>
+        <h3>Master Class</h3>
+        <table>
+            <tbody>
+            <tr th:each="alumno: ${alumnos}">
+                <td class="btn btn-primary m-2" th:text="${alumno}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
