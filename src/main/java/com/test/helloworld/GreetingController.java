@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Controller
 public class GreetingController {
 
-    private static final String template = "Bienvenido,%s!";
+    private static final String template = "Welcome,%s!";
     private final AtomicLong counter = new AtomicLong();
     private ArrayList<String> array = new ArrayList<String>();
 
